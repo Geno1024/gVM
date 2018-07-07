@@ -18,26 +18,20 @@ object Main
     {
         BIOS().apply {
             monitor = Monitor().apply {
-                drawPixel(1, 1, Color.RED.rgb)
                 resetSize(1024, 768)
-                drawPixel(1022, 766, Color.GREEN.rgb)
-                drawPixel(1, 766, Color.BLUE.rgb)
-                drawPixel(1022, 1, Color.WHITE.rgb)
             }
-            drawCharacter(0, 0, Default.x67)
-            drawCharacter(1, 0, Default.x56)
-            drawCharacter(2, 0, Default.x4d)
+            drawPixel(1, 1, Color.RED.rgb)
+            drawPixel(1022, 766, Color.GREEN.rgb)
+            drawPixel(1, 766, Color.BLUE.rgb)
+            drawPixel(1022, 1, Color.WHITE.rgb)
 
-            drawCharacter(0, 2, Default.x42)
-            drawCharacter(1, 2, Default.x79)
-            drawCharacter(3, 2, Default.x47)
-            drawCharacter(4, 2, Default.x65)
-            drawCharacter(5, 2, Default.x6e)
-            drawCharacter(6, 2, Default.x6f)
-            drawCharacter(7, 2, Default.x31)
-            drawCharacter(8, 2, Default.x30)
-            drawCharacter(9, 2, Default.x32)
-            drawCharacter(10, 2, Default.x34)
+            drawString(0, 0, "gVM")
+
+            drawString(0, 2, "By Geno1024")
+
+            drawString(0, 3, "$> _")
+            drawString(0, 4, "00000000001111111111222222222233333333334444444444555555555566666666667777777777888888888899999999990000000000111111111112222222")
+            drawString(0, 5, "01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567")
         }
     }
 }

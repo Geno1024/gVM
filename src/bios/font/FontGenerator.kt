@@ -27,6 +27,7 @@ object FontGenerator
         println("{")
         println("\toverride val name: String = \"Default\"")
         println("\toverride val description: String = \"Default Font\"")
+        println("")
         ('\u0000'..'\u007f').map {
             with(BufferedImage(8, 16, BufferedImage.TYPE_INT_ARGB)) bi@ {
                 with(graphics) {
@@ -41,6 +42,8 @@ object FontGenerator
                 }
             }
         }.forEach { println("\tval x${it.first.toInt().toString(16)}: Array<Int> = ${it.second}") }
+        println("")
+        println("\tval charmap: Array<DotMatrix> = arrayOf(${(0..127).joinToString { "x${it.toString(16)}" }})")
 
         println("}")
     }
